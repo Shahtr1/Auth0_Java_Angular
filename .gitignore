@@ -1,0 +1,123 @@
+# -----------------------------
+# OS junk
+# -----------------------------
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Icon?
+*.swp
+*.swo
+*~
+*.orig
+*.rej
+
+# -----------------------------
+# IDE / Editor
+# -----------------------------
+/.idea/
+**/.idea/
+*.iml
+.project
+.classpath
+.settings/
+.vscode/
+**/.vscode/
+.factorypath
+/.metadata/
+
+# -----------------------------
+# Node / Angular (any package/app)
+# -----------------------------
+node_modules/
+**/node_modules/
+dist/
+**/dist/
+.angular/
+**/.angular/
+.angular/cache/
+**/.angular/cache/
+coverage/
+**/coverage/
+.npm-cache/
+npm-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.eslintcache
+.cache/
+
+# Lockfiles are important for reproducible builds — keep them
+!package-lock.json
+!yarn.lock
+!pnpm-lock.yaml
+
+# -----------------------------
+# Java / Maven / Gradle
+# -----------------------------
+target/
+**/target/
+build/
+**/build/
+out/
+**/out/
+.gradle/
+**/.gradle/
+dependency-reduced-pom.xml
+*.class
+hs_err_pid*.log
+
+# Keep Maven/Gradle wrappers committed
+!mvnw
+!mvnw.cmd
+!.mvn/wrapper/maven-wrapper.jar
+!.mvn/wrapper/maven-wrapper.properties
+!gradlew
+!gradlew.bat
+!gradle/wrapper/gradle-wrapper.jar
+!gradle/wrapper/gradle-wrapper.properties
+
+# -----------------------------
+# Spring Boot / app runtime
+# -----------------------------
+logs/
+**/logs/
+*.log
+*.tmp
+tmp/
+**/tmp/
+
+# Local-only config (commit examples instead)
+.env
+.env.*
+!.env.example
+
+# Optional local Spring profiles (avoid committing secrets)
+application-local.properties
+application-local.yml
+application-*.local.properties
+application-*.local.yml
+
+# Embedded DB files (H2, etc.)
+*.h2.db
+*.mv.db
+*.db
+
+# -----------------------------
+# Docker / containers (optional)
+# -----------------------------
+.container-*
+docker-compose.override.yml
+
+# -----------------------------
+# Misc
+# -----------------------------
+*.pid
+*.seed
+
+
+# local env files per app (do not commit)
+orders-api/.env.local
+orders-worker/.env.local
+orders-cli/.env.local
+
+# optional Angular local override
+orders-spa/src/app/config/auth.config.local.ts

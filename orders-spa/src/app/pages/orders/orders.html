@@ -1,0 +1,22 @@
+<section class="p-6">
+    @if ((auth.isAuthenticated$ | async) === true) {
+    <p>Welcome, {{ (auth.user$ | async)?.name || 'user' }}.</p>
+
+    <div class="actions">
+        <button (click)="whoami()">Who am I?</button>
+        <button (click)="load()">Load orders (needs read:orders)</button>
+        <button (click)="create()">Create order (needs write:orders)</button>
+        <a href="" (click)="$event.preventDefault(); logout()">Log out</a>
+    </div>
+
+    @if (error()) { <p style="color:#c00">{{ error() }}</p> }
+    <h3>WhoAmI (Dev Profile only)</h3>
+    <pre>{{ who() | json }}</pre>
+
+    <h3>Orders</h3>
+    <pre>{{ data() | json }}</pre>
+    } @else {
+    <p>You’re logged out.</p>
+    <button (click)="login()">Log in</button>
+    }
+</section>

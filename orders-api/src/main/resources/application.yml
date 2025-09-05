@@ -1,0 +1,14 @@
+server:
+  port: ${SERVER_PORT:8080}
+
+spring:
+  application:
+    name: Orders API
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          # Auth0 tenant (note the trailing slash)
+          issuer-uri: ${AUTH0_ISSUER_URI}
+auth0:
+  audience: ${AUTH0_AUDIENCE}
